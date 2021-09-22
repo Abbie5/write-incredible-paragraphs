@@ -6,7 +6,7 @@ import androidx.compose.ui.window.application
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 
-fun main(args: Array<String>) = application {
+fun main() = application {
     Window(onCloseRequest = ::exitApplication) {
         var text by remember { mutableStateOf("edit here") }
         BasicTextField(text, { text = it })
