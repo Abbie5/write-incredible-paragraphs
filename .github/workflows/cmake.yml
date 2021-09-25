@@ -41,6 +41,10 @@ jobs:
       # See https://cmake.org/cmake/help/latest/manual/ctest.1.html for more detail
       run: ctest -C ${{env.BUILD_TYPE}}
       
+    - name: Windows Deployment Tool
+      working-directory: ${{github.workspace}}/build
+      run: windeployqt Release/write_incredible_paragraphs.exe
+      
     - uses: actions/upload-artifact@v2
       with:
         path: ${{github.workspace}}/build/Release # or path/to/artifact
