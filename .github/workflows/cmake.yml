@@ -42,8 +42,7 @@ jobs:
       run: ctest -C ${{env.BUILD_TYPE}}
       
     - name: Windows Deployment Tool
-      working-directory: ${{github.workspace}}/build
-      run: windeployqt Release/write_incredible_paragraphs.exe
+      run: windeployqt ${{github.workspace}}/build/Release
       
     - uses: actions/upload-artifact@v2
       with:
