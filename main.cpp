@@ -1,6 +1,6 @@
-#include <iostream>
+#include <QDebug>
 
 int main() {
-    std::cout << "Initial Commit" << std::endl;
+    qDebug() << "Added Qt6";
     return EXIT_SUCCESS;
 }
